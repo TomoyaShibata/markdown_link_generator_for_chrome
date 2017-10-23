@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Markdown Link Generator",
+  "description": "hogehoge",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "clipboardWrite"
+  ]
+}

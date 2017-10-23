@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+  <title>Document</title>
+  <style>
+    body {
+      width: 300px;
+    }
+
+    textarea {
+      height: 100px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .area-button-group {
+      margin-top: 1em;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
+      <textarea class="mdc-textfield__input"
+                id="js-markdown-link-text"
+                rows="8"
+                cols="40"
+                aria-label="Markdowon link text"></textarea>
+  </div>
+
+  <div class="area-button-group">
+    <button id="js-copy-button"
+            class="mdc-button mdc-button--raised">
+      Copy to Clipboard
+    </button>
+  </div>
+
+  <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+  <script src="./popup.js"></script>
+</body>
+
+</html>
