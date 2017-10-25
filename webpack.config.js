@@ -13,5 +13,18 @@ module.exports = {
   },
   plugins: IS_PRODUCTION ? [
     new UglifyJSPlugin()
-  ] : []
+  ] : [],
+  module : {
+    rules : [
+      {
+        test: /\.css/,
+        loaders: [
+          'style-loader', 
+          {
+            loader: 'css-loader'
+          }
+        ]
+      },
+    ]
+  }
 }

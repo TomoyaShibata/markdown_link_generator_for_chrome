@@ -1,4 +1,5 @@
 import * as mdc from "material-components-web"
+import './node_modules/material-components-web/dist/material-components-web.css'
 
 mdc.autoInit()
 mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'))
