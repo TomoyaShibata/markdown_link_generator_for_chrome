@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Markdown Link Generator",
-  "description": "hogehoge",
+  "name": "Markdown link generator for Chrome",
+  "description": "Extension for Google Chrome which generates Markdown Link of the page currently displayed.",
   "version": "1.0.0",
   "browser_action": {
     "default_popup": "popup.html"
