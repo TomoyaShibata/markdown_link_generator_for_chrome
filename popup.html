@@ -12,8 +12,11 @@
       width: 300px;
     }
 
+    .area-markdown-link-text {
+      height: 200px !important;
+    }
+
     textarea {
-      height: 100px;
       word-wrap: break-word;
       word-break: break-all;
     }
@@ -22,21 +25,23 @@
       margin-top: 1em;
       text-align: right;
     }
+
+    .copy-button {
+      width: 200px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
+  <div class="area-markdown-link-text mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
       <textarea class="mdc-textfield__input"
                 id="js-markdown-link-text"
-                rows="8"
-                cols="40"
                 aria-label="Markdowon link text"></textarea>
   </div>
 
   <div class="area-button-group">
     <button id="js-copy-button"
-            class="mdc-button mdc-button--raised">
+            class="copy-button mdc-button mdc-button--unelevated mdc-button--compact mdc-ripple-upgraded">
       Copy to Clipboard
     </button>
   </div>

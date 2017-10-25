@@ -1,17 +1,25 @@
 mdc.autoInit()
 mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'))
-//mdc.textfield.MDCTextfield.attachTo(document.querySelector('.mdc-textfield'))
 
-chrome.tabs.getSelected(null, (tab) => {
-  const title = tab.title
-  const url = tab.url
+const markdownLinkText = document.getElementById('js-markdown-link-text')
 
-  document.getElementById('js-markdown-link-text').value = `[${title}](${url})`
-})
+chrome.tabs.getSelected(null, (tab) => markdownLinkText.value = `[${tab.title}](${tab.url})` )
 
-document.getElementById('js-copy-button').addEventListener('click', () => {
-  const markdownLinkText = document.getElementById('js-markdown-link-text')
+const copyButton = document.getElementById('js-copy-button')
+
+copyButton.addEventListener('click', () => {
   markdownLinkText.select()
   document.execCommand('copy')
-  window.close()
+  window.getSelection().removeAllRanges()
+
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), 100)
+  }).then(() => {
+    copyButton.disabled = true
+    copyButton.innerText = 'COPY DONE!'
+  })
+
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), 1200)
+  }).then(() => window.close())
 })
