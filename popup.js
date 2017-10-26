@@ -6,7 +6,10 @@ mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'))
 
 const markdownLinkText = document.getElementById('js-markdown-link-text')
 
-chrome.tabs.getSelected(null, (tab) => markdownLinkText.value = `[${tab.title}](${tab.url})` )
+chrome.tabs.getSelected(null, (tab) =>{
+  markdownLinkText.value = `[${tab.title}](${tab.url})`
+  markdownLinkText.select()
+})
 
 const copyButton = document.getElementById('js-copy-button')
 
