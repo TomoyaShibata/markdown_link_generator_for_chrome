@@ -1,13 +1,18 @@
 {
-  "manifest_version": 2,
-  "name": "Markdown link generator for Chrome",
-  "description": "Extension for Google Chrome which generates Markdown Link of the page currently displayed.",
-  "version": "1.0.1",
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "tabs",
-    "clipboardWrite"
-  ]
+    "name": "Markdown link generator for Chrome",
+    "description": "Extension for Google Chrome which generates Markdown Link of the page currently displayed.",
+    "version": "2.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/m_icon_16.png",
+            "32": "images/m_icon_32.png",
+            "48": "images/m_icon_48.png",
+            "128": "images/m_icon_128.png"
+        }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }

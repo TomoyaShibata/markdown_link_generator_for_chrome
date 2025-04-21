@@ -1,51 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
   <style>
+    @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
     body {
-      width: 300px;
+      padding: 20px;
+      width: 400px;
     }
-
-    .area-markdown-link-text {
-      height: 200px !important;
-    }
-
     textarea {
       word-wrap: break-word;
       word-break: break-all;
     }
-
-    .area-button-group {
-      margin-top: 1em;
-      text-align: right;
-    }
-
-    .copy-button {
-      width: 200px;
+    button {
+      margin-top: 10px;
+      width: 100%;
     }
   </style>
 </head>
-
 <body>
-  <div class="area-markdown-link-text mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
-      <textarea class="mdc-textfield__input"
-                id="js-markdown-link-text"
-                aria-label="Markdowon link text"></textarea>
+  <div>
+    <textarea id="js-markdown-link-text" class="textarea" aria-label="Markdowon link text"></textarea>
   </div>
-
-  <div class="area-button-group">
-    <button id="js-copy-button"
-            class="copy-button mdc-button mdc-button--unelevated mdc-button--compact mdc-ripple-upgraded">
-      Copy to Clipboard
-    </button>
+  <div>
+    <button id="js-copy-button" class="button is-primary">COPY TO CLIPBOARD</button>
   </div>
-
-  <script src="./dist/bundle.js"></script>
+  <script src="./popup.js"></script>
 </body>
-
 </html>
