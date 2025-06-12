@@ -24,11 +24,16 @@
   </style>
 </head>
 <body>
+  <label class="label">Markdown</label>
   <div>
-    <textarea id="js-markdown-link-text" class="textarea" aria-label="Markdowon link text"></textarea>
+    <textarea id="js-markdown-text" class="textarea" aria-label="Markdowon text"></textarea>
+    <button id="js-copy-markdown-button" class="button is-primary">COPY</button>
   </div>
+  <hr>
+  <label class="label">Scrapbox</label>
   <div>
-    <button id="js-copy-button" class="button is-primary">COPY TO CLIPBOARD</button>
+    <textarea id="js-scrapbox-text" class="textarea" aria-label="Scrapbox text"></textarea>
+    <button id="js-copy-scrapbox-button" class="button is-primary">COPY</button>
   </div>
   <script src="./popup.js"></script>
 </body>
