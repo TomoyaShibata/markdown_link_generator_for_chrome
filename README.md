@@ -1,11 +1,11 @@
-# Markdown link generator for Chrome
+# Link generator for Chrome
 
 > [!NOTE]
 > Manifest V3 supported!
 
-Extension for Google Chrome which generates Markdown Link of the page currently displayed.
+Extension for Google Chrome which generates link of Markdown and Scrapbox of the page currently displayed.
 
-![CAPTURE.gif](CAPTURE.gif)
+<img src="./capture.png" width=500>
 
 # License
 
